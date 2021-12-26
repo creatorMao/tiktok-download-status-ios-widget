@@ -1,7 +1,3 @@
-// 哔哩哔哩粉丝数
-// 作者：azoon
-// 调用参数 bilibili@fans:446791792
-
 class Im3xWidget {
     /**
     * 初始化
@@ -67,7 +63,6 @@ class Im3xWidget {
         utTxt.centerAlignText()
         utTxt.textOpacity = 0.5
 
-        w.url = 'bilibili://'
         return w
     }
 
@@ -87,7 +82,7 @@ class Im3xWidget {
 
     //加载B站数据
     async getData() {
-        let api = 'http://192.168.1.11:9877/downloadHistory/latest'
+        let api = 'http://xxxxxxxxxxx/downloadHistory/latest'
         let req = new Request(api)
         let res = await req.loadJSON()
         return res
@@ -98,12 +93,7 @@ class Im3xWidget {
         let req = new Request(url)
         return await req.loadImage()
     }
-
-    //格式化粉丝数量，加入千分号
-    toThousands(num) {
-        return (num || 0).toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,');
-    }
-
+    
     //编辑测试使用
     async test() {
         if (config.runsInWidget) return
