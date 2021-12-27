@@ -1,3 +1,5 @@
 # douyin-download
  
-![example](example.png)
+![example](pad-example.png)
+
+![example](mobile-example.png)
