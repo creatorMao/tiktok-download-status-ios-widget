@@ -24,8 +24,10 @@ class Im3xWidget {
         let w = new ListWidget()
 
         let header = w.addStack()
+        header.centerAlignContent()
         let icon = header.addImage(await this.getImage('https://lf1-cdn-tos.bytegoofy.com/goofy/ies/douyin_web/public/favicon.ico'))
         icon.imageSize = new Size(titleFontSize, titleFontSize)
+        header.addSpacer(5)
         let title = header.addText("抖音增量下载")
         title.textOpacity = 0.9
         title.font = Font.systemFont(titleFontSize)
